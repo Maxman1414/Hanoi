@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DefaultController">
+   <children>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="80.0">
+         <children>
+            <Label fx:id="diskLabel" prefHeight="40" text="Number of Disks: " textFill="#0011ab" />
+            <JFXSlider fx:id="slider" blockIncrement="1.0" majorTickUnit="30.0" max="30.0" min="1.0" minorTickCount="30" prefHeight="24.0" prefWidth="370.0" showTickMarks="true" snapToTicks="true" value="1.0">
+               <effect>
+                  <ColorAdjust brightness="0.32" hue="0.22" />
+               </effect></JFXSlider>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="80">
+         <children>
+            <Label alignment="CENTER_RIGHT" text="Starting Tower:  " textFill="#0000a4" />
+            <JFXComboBox fx:id="startCB" prefHeight="28.0" prefWidth="140.0" promptText="Select A Tower" unFocusColor="#4784ff" />
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="123.0" text="Target Tower:  " textFill="#070094" />
+            <JFXComboBox fx:id="targetCB" focusColor="#2b4490" prefHeight="28.0" prefWidth="140.0" promptText="Select A Tower" unFocusColor="#4980ff" />
+         </children>
+      </HBox>
+      <Separator prefHeight="0.0" prefWidth="600.0" />
+      <HBox alignment="CENTER" prefHeight="48.0" prefWidth="600.0">
+         <children>
+            <JFXButton fx:id="startBtn" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" focusTraversable="false" onAction="#onStartPressed" prefHeight="32.0" prefWidth="82.0" ripplerFill="#1a3f51" text="Start" textFill="#5787ff" />
+            <Label prefHeight="18.0" prefWidth="26.0" />
+            <JFXProgressBar fx:id="progressBar" progress="0.0">
+               <effect>
+                  <ColorAdjust brightness="0.29" contrast="-0.48" hue="0.22" />
+               </effect></JFXProgressBar>
+         </children>
+      </HBox>
+   </children>
+</VBox>
